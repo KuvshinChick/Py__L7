@@ -17,4 +17,3 @@ if __name__ == '__main__':
     new_list = [y for y in num_list if y == 10]
 
     print(f"Кол-во элементов: {len(new_list)}, их произведение: {10 ** len(new_list)}")
-    
