@@ -25,19 +25,23 @@ if __name__ == '__main__':
 
     # Нахождение суммы модулей элементов
     abs_sum = 0
-    for item in num_list[i_min::]:
+    for item in num_list[i_min+1::]:
         abs_sum += abs(item)
 
     # Замена элементов списка
-    for i in range(len(num_list)):
-        num_list[i] = num_list[i] ** 2
+    for i, item in enumerate(num_list):
+        if item < 0:
+            num_list[i] = num_list[i]**2
 
     # Упорядочивание списка
     num_list.sort()
+    # Приведение списка к формату двух чисел после запятой
+    # num_list = ['%.2f' % elem for elem in num_list]
 
-    print(f"Кол-во отрицательных элементов: {neg_num_sum}\n"
-          f"Сумма модулей элементов, расположенных после "
-          f"минимального по модулю элемента {abs_sum}\n"
-          f"Модифицированный массив: {num_list}")
+    print(f"Кол-во отрицательных элементов: {neg_num_sum}")
+    print(f"Сумма модулей элементов, расположенных после",  end=' ')
+    print(f"минимального по модулю элемента {abs_sum}")
+    print(f"Модифицированный массив: {num_list}")
+
 
 

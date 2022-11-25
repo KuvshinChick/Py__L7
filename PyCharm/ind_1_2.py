@@ -13,6 +13,7 @@ if __name__ == '__main__':
         exit(1)
 
     # Найти искомое произведение.
+    # new_list = [y for y in num_list if y > 8 and y < 18 and y % 10 == 0]
     # (Условия '>8' '<18' '%10 == 0', дают нам, что элемент равен 10)
     new_list = [y for y in num_list if y == 10]
 
